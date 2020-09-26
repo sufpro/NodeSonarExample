@@ -1,0 +1,50 @@
+pipeline {
+  agent any
+    
+  tools {nodejs "nodeproject"}
+    
+  stages {
+        
+    stage('Cloning Git') {
+      steps {
+        git 'https://github.com/sufpro/NodeSonarExample.git'
+      }
+    }
+        
+    stage('Install dependencies') {
+      steps {
+        sh 'npm install'
+      }
+    }
+     
+    stage('Test') {
+      steps {
+         sh 'npm test'
+      }
+    }      
+//START - Code Quality Check via SonarQube
+stage('Code Quality Check via SonarQube') {
+   steps {
+       script {
+       def scannerHome = tool 'sonarqube-scanner';
+           withSonarQubeEnv() {
+           sh "${tool('sonarqube-scanner')}/bin/sonar-scanner \
+           -Dsonar.projectKey=test-node-js \
+           -Dsonar.sources='src' \
+           -Dsonar.tests='src' \
+           -Dsonar.inclusions='**' \
+           -Dsonar.test.inclusions='src/**/*.spec.js,src/**/*.spec.jsx,src/**/*.test.js,src/**/*.test.jsx' \
+           -Dsonar.javascript.lcov.reportPaths='coverage/lcov.info' \
+           -Dsonar.testExecutionReportPaths='coverage/test-reporter.xml'"
+               }
+       }
+   }
+}
+/*
+\
+           -Dsonar.login=credentials('sonarqube_access_token')"
+*/
+//END - Code Quality Check via SonarQube
+
+  }
+}
