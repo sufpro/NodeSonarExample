@@ -1,5 +1,5 @@
 liabraries {
- nodejs
+ maven
  sonarqube {
   projectKey=test-node-js
   sources='src'
