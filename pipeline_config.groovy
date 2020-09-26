@@ -1,3 +1,3 @@
-liabraries {
+libraries {
  maven
 }
