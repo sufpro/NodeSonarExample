@@ -3,7 +3,7 @@ libraries {
  sonarqube 
 } 
  application_environments{
-  projectKey=test-node-js
+  projectKey='test-node-js'
   sources='src'
   tests='src' 
   inclusions='**'
