@@ -1,35 +1,32 @@
 {
-  "name": "NodeSonarExample",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "devDependencies": {
-    "jest-sonar-reporter": "^2.0.0",
-    "sonarqube-scanner": "^2.7.0",
-    "supertest": "^4.0.2",
-    "jest" : "^26.4.2",
-    "express" : "^4.17.1"
-  },
+    "name": "NodeSonarExample",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
     "scripts": {
-        "sonar":  "node sonar-project.js",
-        "test":  "jest --coverage"
+        "sonar": "node sonar-project.js",
+        "test": "jest --coverage"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "jest-sonar-reporter": "^2.0.0",
+        "sonarqube-scanner": "^2.7.0",
+        "supertest": "^4.0.2",
+        "jest": "^26.4.2",
+        "express": "^4.17.1"
     },
     "jest": {
-        "testEnvironment":  "node",
+        "testEnvironment": "node",
         "coveragePathIgnorePatterns": [
             "/node_modules/"
         ],
-        "testResultsProcessor":  "jest-sonar-reporter"
+        "testResultsProcessor": "jest-sonar-reporter"
     },
     "jestSonar": {
-        "reportPath":  "coverage",
-        "reportFile":  "test-reporter.xml",
-        "indent":  4
+        "reportPath": "coverage",
+        "reportFile": "test-reporter.xml",
+        "indent": 4
     }
 }
