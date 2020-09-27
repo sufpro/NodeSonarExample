@@ -1,6 +1,7 @@
 libraries {
- maven
+ nodejs
  sonarqube {
+  merge=true
   projectKey='projNodeJs'
   sources='src'
   tests='src' 
