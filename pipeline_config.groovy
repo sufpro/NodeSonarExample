@@ -1,7 +1,7 @@
 libraries {
  nodejs
  sonarqube {
-  merge=true
+  merge =true
   projectKey='projNodeJs'
   sources='src'
   tests='src' 
