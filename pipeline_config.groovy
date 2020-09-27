@@ -1,8 +1,8 @@
 libraries {
- nodejs {
- merge=true
- xx='yy'
-}
+// nodejs {
+// merge=true
+// xx='yy'
+//}
  sonarqube {
   merge =true
   projectKey='projNodeJs'
