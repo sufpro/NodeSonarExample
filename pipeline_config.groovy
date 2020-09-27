@@ -2,7 +2,7 @@ libraries {
  maven
  sonarqube 
 } 
- application_environments{
+/* application_environments{
   projectKey='test-node-js'
   sources='src'
   tests='src' 
@@ -10,4 +10,4 @@ libraries {
   testInclusions='src/**/*.spec.js,src/**/*.spec.jsx,src/**/*.test.js,src/**/*.test.jsx'
   lcov='coverage/lcov.info'
   testExecutionReportPaths='coverage/test-reporter.xml'
-}
+}*/
