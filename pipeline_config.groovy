@@ -5,5 +5,6 @@ libraries {
 //}
  sonarqube {
   qq='ww'
+  env='nodejs'
 }
 } 
