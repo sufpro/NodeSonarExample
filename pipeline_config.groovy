@@ -4,7 +4,7 @@ libraries {
  // xx='yy'
 //}
  sonarqube {
-  qq='ww'
+  qq='ww',
   env='nodejs'
 }
 } 
