@@ -4,7 +4,6 @@ libraries {
  xx='yy'
 }
  sonarqube {
-  merge=true
   qq='ww'
 }
 } 
