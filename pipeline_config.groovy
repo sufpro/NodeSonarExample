@@ -6,4 +6,5 @@ libraries {
  sonarqube {
   merge=true
   qq=ww
+}
 } 
