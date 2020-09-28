@@ -1,10 +1,10 @@
 libraries {
- // nodejs {
- // merge=true
- // xx='yy'
-//}
+  nodejs {
+  merge=true
+  xx='yy'
+}
  sonarqube {
-  qq='ww',
+  qq='ww'
   env='nodejs'
 }
 } 
